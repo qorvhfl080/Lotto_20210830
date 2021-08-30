@@ -18,7 +18,7 @@ public class Lotto {
 				System.out.print((i + 1) + "번째 숫자 입력 : ");
 				int num = sc.nextInt();
 				
-				boolean isRangeOk = true;
+				boolean isRangeOk = 1 <= num && num <= 45;
 				boolean isDuplOk = true;
 				
 				if (isRangeOk && isDuplOk) {
