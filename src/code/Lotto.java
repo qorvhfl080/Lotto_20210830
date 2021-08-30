@@ -20,6 +20,13 @@ public class Lotto {
 				
 				boolean isRangeOk = 1 <= num && num <= 45;
 				boolean isDuplOk = true;
+				for (int input : inputNumbers) {
+					if (num == input) {
+						isDuplOk = false;
+						
+						break;
+					}
+				}
 				
 				if (isRangeOk && isDuplOk) {
 					
