@@ -68,10 +68,46 @@ public class Lotto {
 				
 				break;
 			}
-			
-			
 		}
-
+		
+		for (int winNum : winNumbers) {
+			
+			System.out.println(winNum);
+		}
+		
+		int correctNumCount = 0;
+		
+		for (int myNum : inputNumbers) {
+			
+			for (int winNum : winNumbers) {
+				
+				if (myNum == winNum) {
+					correctNumCount++;
+				}	
+			}
+		}
+		
+		switch (correctNumCount) {
+		case 6:
+			System.out.println("1등 - 10억원");
+			break;
+		case 5:
+			System.out.println("2등");
+			break;
+		case 4:
+			System.out.println("3등 - 2백만원");
+			break;
+		case 3:
+			System.out.println("4등 - 5만원");
+			break;
+		case 2:
+			System.out.println("5등 - 5천원");
+			break;
+		default:
+			System.out.println("낙첨입니다.");
+			break;
+		}
+		
 	}
-
+	
 }
