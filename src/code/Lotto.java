@@ -18,7 +18,11 @@ public class Lotto {
 				System.out.print((i + 1) + "번째 숫자 입력 : ");
 				int num = sc.nextInt();
 				
-				if (false) {
+				boolean isRangeOk = true;
+				boolean isDuplOk = true;
+				
+				if (isRangeOk && isDuplOk) {
+					
 					break;
 				} else {
 					System.out.println("잘못된 숫자입니다. 다시 입력해주세요");
