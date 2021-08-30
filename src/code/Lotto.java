@@ -1,5 +1,6 @@
 package code;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Lotto {
@@ -50,16 +51,24 @@ public class Lotto {
 		int[] winNumbers = new int[6];
 		for (int i = 0; i < winNumbers.length; i++) {
 			
-			while (true) {
-				
-				boolean isDulOk = true;
-				
-				if (isDulOk) {
+//			1 ~ 45
+			int randomNum = (int)(Math.random() * 45) + 1;
+			boolean isDulOk = true;
+			
+			for (int winNum : winNumbers) {
+				if (randomNum == winNum) {
+					isDulOk = false;
 					
 					break;
 				}
-				
 			}
+			
+			if (isDulOk) {
+				winNumbers[i] = randomNum;
+				
+				break;
+			}
+			
 			
 		}
 
