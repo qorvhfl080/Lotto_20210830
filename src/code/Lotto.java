@@ -29,6 +29,7 @@ public class Lotto {
 				}
 				
 				if (isRangeOk && isDuplOk) {
+					inputNumbers[i] = num;
 					
 					break;
 				} else {
@@ -39,6 +40,7 @@ public class Lotto {
 
 		}
 
+		System.out.println(inputNumbers);
 		sc.close();
 
 	}
