@@ -70,10 +70,21 @@ public class Lotto {
 			}
 		}
 		
+		for (int i = 0; i < winNumbers.length; i++) {
+			for (int j = 0; j < winNumbers.length - 1; j++) {
+				if (winNumbers[j] > winNumbers[j + 1]) {
+					int t = winNumbers[j];
+					winNumbers[j] = winNumbers[j + 1];
+					winNumbers[j + 1] = t;
+				}
+			}
+		}
+		
 		for (int winNum : winNumbers) {
 			
-			System.out.println(winNum);
+			System.out.print(winNum + " ");
 		}
+		System.out.println();
 		
 		int correctNumCount = 0;
 		
