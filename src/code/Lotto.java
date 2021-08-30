@@ -52,7 +52,7 @@ public class Lotto {
 		for (int i = 0; i < winNumbers.length; i++) {
 			
 //			1 ~ 45
-			int randomNum = (int)(Math.random() * 45) + 1;
+			int randomNum = (int)(Math.random() * 45 + 1);
 			boolean isDulOk = true;
 			
 			for (int winNum : winNumbers) {
@@ -68,6 +68,27 @@ public class Lotto {
 				
 				break;
 			}
+		}
+		
+		int bonusNum = 0;
+		
+		while (true) {
+			
+			int randomNum = (int) (Math.random() * 45 + 1);
+			boolean isDuplOk = true;
+			
+			for (int num : winNumbers) {
+				if (num == randomNum) {
+					isDuplOk = false;
+					break;
+				}
+			}
+			
+			if (isDuplOk) {
+				bonusNum = randomNum;
+				break;
+			}
+			
 		}
 		
 		for (int i = 0; i < winNumbers.length; i++) {
@@ -104,6 +125,21 @@ public class Lotto {
 			break;
 		case 5:
 			System.out.println("2등");
+			boolean isBonusCorrect = false;
+			
+			for (int myNum : inputNumbers) {
+				if (myNum == bonusNum) {
+					isBonusCorrect = true;
+					break;
+				}
+			}
+			
+			if (isBonusCorrect) {
+				System.out.println("2등 - 4천만원");
+			} else {
+				System.out.println("3등 - 2백만원");
+			}
+			
 			break;
 		case 4:
 			System.out.println("3등 - 2백만원");
