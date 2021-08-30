@@ -45,9 +45,23 @@ public class Lotto {
 			}
 
 		}
-
-		System.out.println(inputNumbers);
 		sc.close();
+		
+		int[] winNumbers = new int[6];
+		for (int i = 0; i < winNumbers.length; i++) {
+			
+			while (true) {
+				
+				boolean isDulOk = true;
+				
+				if (isDulOk) {
+					
+					break;
+				}
+				
+			}
+			
+		}
 
 	}
 
