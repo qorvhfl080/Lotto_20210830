@@ -33,7 +33,13 @@ public class Lotto {
 					
 					break;
 				} else {
-					System.out.println("잘못된 숫자입니다. 다시 입력해주세요");
+					if (!isRangeOk)
+						System.out.println("범위가 맞지 않습니다");
+					else if (!isDuplOk)
+						System.out.println("중복입니다.");
+					else 
+						System.out.println("숫자를 입력하세요");
+					System.out.println("다시 입력해주세요 : ");
 				}
 				
 			}
